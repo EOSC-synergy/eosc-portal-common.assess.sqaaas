@@ -2,10 +2,10 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.7
+      branch: release/1.7.11
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cyfronet-fid/eosc-portal-common:
-      branch: master
+      branch: develop
       repo: https://github.com/cyfronet-fid/eosc-portal-common
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/cyfronet-fid/eosc-portal-common git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-goldenrod-sponge.sh
-        container: qc.acc_sleepy-razzmatazz-fossa
+        - /usr/bin/env sh .sqa/script.breezy-aqua-kudu.sh
+        container: qc.acc_blurry-ruby-mammoth
   QC.Doc:
     repos:
       github.com/cyfronet-fid/eosc-portal-common find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-olivine-rabbit.sh
-        container: qc.doc_sunny-wisteria-zebu
+        - /usr/bin/env sh .sqa/script.thirsty-bronze-jaguar.sh
+        container: qc.doc_flabby-beige-robin
       github.com/cyfronet-fid/eosc-portal-common git:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-lilac-terrier.sh
-        container: qc.doc_surly-khaki-impala
+        - /usr/bin/env sh .sqa/script.boozy-cerise-tarantula.sh
+        container: qc.doc_woozy-gold-chow
       github.com/cyfronet-fid/eosc-portal-common markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-chestnut-uguisu.sh
-        container: qc.doc_sickly-cinnabar-snail
+        - /usr/bin/env sh .sqa/script.goopy-zucchini-fousek.sh
+        container: qc.doc_flaky-khaki-capybara
   QC.Lic:
     repos:
       github.com/cyfronet-fid/eosc-portal-common licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-brown-dhole.sh
-        container: qc.lic_gamy-turquoise-dugong
+        - /usr/bin/env sh .sqa/script.trippy-puce-shrew.sh
+        container: qc.lic_hasty-amber-corgi
   QC.Sty:
     repos:
       github.com/cyfronet-fid/eosc-portal-common jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-cinnabar-urchin.sh
-        container: qc.sty_ready-lemon-tiger
+        - /usr/bin/env sh .sqa/script.muggy-sapphire-deer.sh
+        container: qc.sty_woozy-sepia-ant
   QC.Ver:
     repos:
       github.com/cyfronet-fid/eosc-portal-common get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-puce-hyrax.sh
-        container: qc.ver_droopy-buff-jaguar
+        - /usr/bin/env sh .sqa/script.shaky-rose-liger.sh
+        container: qc.ver_lousy-scarlet-mule
 timeout: 5400
